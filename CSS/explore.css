@@ -1,0 +1,630 @@
+/* DASHBOARD */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 220px;
+    gap: 22px;
+
+    width: 90%;
+    max-width: 1300px;
+    margin: 35px auto;
+}
+
+.sidebar-left,
+.matches,
+.sidebar-right {
+    box-sizing: border-box;
+    padding: 18px;
+    border-radius: 15px;
+    background: #222232;
+    color: white;
+    min-width: 0;
+}
+
+.matches {
+    min-height: 500px;
+}
+
+.sidebar-left,
+.sidebar-right {
+    min-height: 450px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        width: 92%;
+        gap: 15px;
+        margin: 20px auto;
+    }
+
+    .sidebar-left,
+    .matches,
+    .sidebar-right {
+        min-height: auto;
+    }
+}
+
+
+/* LEAGUES */
+
+.sidebar-left h2 {
+    margin: 0 0 20px;
+    font-size: 19px;
+    color: #ffffff;
+}
+
+.league-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.league-list a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 9px;
+    border-radius: 9px;
+
+    color: #d5d5df;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: background 0.25s ease,
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.league-list a:hover {
+    background: #343449;
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+.league-icon {
+    width: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* TOP PERFORMANCE PANEL */
+
+.performance-panel {
+    background: #222232;
+    border-radius: 15px;
+    padding: 18px 15px;
+    color: white;
+    overflow: hidden;
+}
+
+.performance-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.performance-title h2 {
+    font-size: 14px;
+    margin: 0;
+    color: #eeeeF5;
+}
+
+.performance-title span {
+    font-size: 19px;
+}
+
+/* PERFORMANCE GROUPS */
+
+.performance-group {
+    display: grid;
+    grid-template-columns: 22px minmax(0, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #303041;
+}
+
+.group-label {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-left: 2px solid;
+}
+
+.goals .group-label {
+    color: #79d34a;
+    border-color: #79d34a;
+}
+
+.assists .group-label {
+    color: #d7b62d;
+    border-color: #d7b62d;
+}
+
+.average .group-label {
+    color: #e34242;
+    border-color: #e34242;
+}
+
+/* PLAYER ROWS */
+
+.player-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.player-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 9px 3px;
+    border-bottom: 1px solid #2c2c3c;
+    transition: background 0.2s ease;
+}
+
+.player-row:last-child {
+    border-bottom: none;
+}
+
+.player-row:hover {
+    background: #303044;
+}
+
+/* PLAYER PHOTOS */
+
+.player-photo {
+    width: 29px;
+    height: 29px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    background: #414153;
+    border: 2px solid #eeeeee;
+    transition: transform 0.25s ease;
+}
+
+.player-row:hover .player-photo {
+    transform: scale(1.12);
+}
+
+/* PLAYER INFORMATION */
+
+.player-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.player-info h3 {
+    margin: 0 0 4px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.player-info p {
+    margin: 0;
+    font-size: 7px;
+    color: #a4a4b5;
+}
+
+/* PLAYER STATISTICS */
+
+.player-stat {
+    font-size: 12px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.player-stat.rating {
+    background: #61e64e;
+    color: #111;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 9px;
+}
+
+/* HEADER RIGHT */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+
+/* LEAGUE TABLE */
+
+.matches {
+    background: #222232;
+    border-radius: 15px;
+    padding: 20px 24px;
+    color: white;
+    min-width: 0;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #303041;
+}
+
+.table-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-title h2 {
+    color: #f04d55;
+    font-size: 14px;
+    margin: 0;
+}
+
+.la-liga-logo {
+    color: #ff535b;
+}
+
+.table-columns,
+.team-stats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(25px, 1fr));
+    width: 55%;
+    text-align: center;
+    font-size: 10px;
+    color: #b9b9c7;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 59px;
+    border-bottom: 1px solid #303041;
+    transition: background 0.2s ease;
+}
+
+.team-row:hover {
+    background: #2c2c40;
+}
+
+.team-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    font-size: 11px;
+    color: #e2e2eb;
+}
+
+.team-name img {
+    width: 23px;
+    height: 23px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.team-stats {
+    font-size: 10px;
+}
+
+.team-stats strong {
+    color: white;
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 48%;
+    margin: 22px auto 0;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff9b7f, #f05b50);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.read-more:hover {
+    transform: scale(1.04);
+}
+
+/* MOBILE TABLE */
+
+@media (max-width: 700px) {
+    .matches {
+        padding: 16px 12px;
+    }
+
+    .table-columns,
+    .team-stats {
+        width: 52%;
+    }
+
+    .team-name {
+        font-size: 10px;
+        gap: 6px;
+    }
+
+    .team-name img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .team-row {
+        min-height: 52px;
+    }
+}
+
+/* LEAGUE TABLE */
+
+.matches {
+    background: #222232;
+    border-radius: 15px;
+    padding: 20px 24px;
+    color: white;
+    min-width: 0;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #303041;
+}
+
+.table-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-title h2 {
+    color: #f04d55;
+    font-size: 14px;
+    margin: 0;
+}
+
+.la-liga-logo {
+    color: #ff535b;
+}
+
+.table-columns,
+.team-stats {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(25px, 1fr));
+    width: 55%;
+    text-align: center;
+    font-size: 10px;
+    color: #b9b9c7;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.team-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 59px;
+    border-bottom: 1px solid #303041;
+    transition: background 0.2s ease;
+}
+
+.team-row:hover {
+    background: #2c2c40;
+}
+
+.team-name {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    font-size: 11px;
+    color: #e2e2eb;
+}
+
+.team-name img {
+    width: 23px;
+    height: 23px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.team-stats {
+    font-size: 10px;
+}
+
+.team-stats strong {
+    color: white;
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 48%;
+    margin: 22px auto 0;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #ff9b7f, #f05b50);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.read-more:hover {
+    transform: scale(1.04);
+}
+
+/* MOBILE TABLE */
+
+@media (max-width: 700px) {
+    .matches {
+        padding: 16px 12px;
+    }
+
+    .table-columns,
+    .team-stats {
+        width: 52%;
+    }
+
+    .team-name {
+        font-size: 10px;
+        gap: 6px;
+    }
+
+    .team-name img {
+        width: 21px;
+        height: 21px;
+    }
+
+    .team-row {
+        min-height: 52px;
+    }
+}
+
+/* LATEST NEWS */
+
+.news-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+    background: transparent;
+    padding: 0;
+}
+
+.news-card {
+    position: relative;
+    width: 100%;
+    height: 175px;
+    border-radius: 13px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #222232;
+}
+
+.news-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.news-card:hover .news-image {
+    transform: scale(1.07);
+}
+
+.news-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+    background: linear-gradient(
+        transparent 20%,
+        rgba(0, 0, 0, 0.75) 100%
+    );
+    color: white;
+}
+
+.news-overlay h3 {
+    font-size: 13px;
+    line-height: 1.35;
+    margin: 0 0 9px;
+    max-width: 90%;
+}
+
+.news-overlay span {
+    font-size: 9px;
+    color: #d1d1dc;
+}
+
+.news-tag {
+    background: white;
+    color: #222232 !important;
+    width: fit-content;
+    padding: 5px 8px;
+    border-radius: 15px;
+    margin-bottom: 9px;
+    font-weight: 700;
+}
+
+/* SECOND NEWS CARD */
+
+.news-card-two {
+    height: 190px;
+    background: linear-gradient(135deg, #1765ed, #102e9b);
+}
+
+.news-card-two .news-image {
+    position: absolute;
+    right: 0;
+    width: 65%;
+    object-position: center;
+}
+
+.news-card-two .news-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(20, 76, 200, 0.95) 0%,
+        rgba(20, 76, 200, 0.65) 55%,
+        transparent 100%
+    );
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.news-card-two .news-overlay h3 {
+    max-width: 65%;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+    .news-panel {
+        gap: 12px;
+    }
+
+    .news-card {
+        height: 170px;
+    }
+
+    .news-card-two {
+        height: 180px;
+    }
+}

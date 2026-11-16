@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="header-left">
+
+            <button>
+                <img src="Menu.png" class="icon" alt="Menu">
+            </button>
+
+            <a href="index.html">
+                <picture>
+                    <source media="(max-width: 700px)" srcset="logo-phone.png">
+                    <img src="Untitled__1_-removebg-preview.png" class="logo" alt="Goalix">
+                </picture>
+            </a>
+
+        </div>
+
+
+        <nav class="header-center">
+
+            <button>
+                <img src="Home.png" class="home" alt="Home">
+            </button>
+
+            <button>
+                <img src="Discovery.png" class="discovery" alt="Discovery">
+            </button>
+
+            <button>
+                <img src="Chart.png" class="chart" alt="Chart">
+            </button>
+            <a href="login.html">
+                <button>
+                    <img src="Profile.png" class="profile" alt="Profile">
+                </button>
+            </a>
+        </nav>
+
+
+        <div class="header-right">
+
+            <div class="search-container">
+
+                <img src="Search.png" alt="Search" class="search-icon">
+
+                <input type="text" class="search-bar" placeholder="Search...">
+
+            </div>
+
+            <button>
+                <img src="Settings.png" class="settings" alt="Settings">
+            </button>
+
+        </div>
+
+    </header>
+    <div class="login-background">
+
+        <main>
+
+            <section class="hero">
+
+                <div class="text-hero">
+
+                    <p class="all">FOOTBALL. ALL IN ONE PLACE.</p>
+
+                    <h1 class="match">Every Match.</h1>
+
+                    <h1 class="moment">Every Moment.</h1>
+
+                    <p class="text2">
+                        Live scores, match statistics, leagues, players, and<br>
+                        much more. Stay closer to the game with GOALIX.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <button class="create-btn">Create account</button>
+
+                        <a href="login.html">
+                            <button class="login-btn">Log in</button>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="neymar">
+
+                    <img src="neymar-jr-brazil-portraits-2018-9z-removebg-preview 1.png" alt="Neymar">
+
+                </div>
+
+            </section>
+
+            <section class="match-strip" aria-label="Featured football match">
+                <div class="match-team team-villa" aria-hidden="true">V</div>
+                <div class="match-team team-liverpool" aria-hidden="true">L</div>
+                <div class="match-details">
+                    <span>Aston Villa <b>vs</b> Liverpool</span>
+                    <strong>2 <i>–</i> 3</strong>
+                </div>
+                <span class="match-status">FT</span>
+            </section>
+
+            <section class="match-cards" aria-label="Recent football matches">
+                <article class="match-card"><span>🏟️</span><span>Aston Villa · Liverpool</span><b>2 – 3</b></article>
+                <article class="match-card"><span>⚽</span><span>Manchester City · Arsenal</span><b>1 – 1</b></article>
+                <article class="match-card"><span>⚽</span><span>Real Madrid · Barcelona</span><b>3 – 2</b></article>
+                <article class="match-card"><span>⚽</span><span>Inter · AC Milan</span><b>0 – 1</b></article>
+            </section>
+        </main>
+
+    </div>
+
+    <div class="login-overlay"></div>
+
+    <section class="login-card">
+
+        <h2>Welcome</h2>
+
+        <form>
+
+            <div class="input-group">
+                <span class="input-icon"><img src="Message.png" alt="message"></span>
+                <input type="email" placeholder="Email" required>
+            </div>
+
+            <div class="input-group password-group">
+                <span class="input-icon"><img src="Password.png" alt="password"></span>
+
+                <input type="password" id="password" placeholder="Password" required>
+
+            </div>
+
+            <div class="login-options">
+
+                <label>
+                    <input type="checkbox">
+                    Remember me
+                </label>
+
+                <a href="#">Forgot Password</a>
+
+            </div>
+
+            <button type="submit" class="sign-in-btn">
+                Log in
+            </button>
+
+        </form>
+
+    </section>
+
+    <script>
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.login-card form')) {
+                window.location.href = 'index.html';
+            }
+        });
+    </script>
+</body>
+
+</html>
